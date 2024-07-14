@@ -1,0 +1,68 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.center-container {
+    position: relative;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    color: wheat;
+}
+
+#info-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: red;
+    font-style: italic;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 35px;
+    z-index: 2;
+    font-weight: bold;
+}
+
+button:active + #info-box {
+    display: block;
+}
+
+button:active {
+    display: none;
+}
+
+</style>
+<body>
+    <div class="center-container">
+        <button id="info-button" style="background-color: red;">Read info</button>
+        <div id="info-box">This is the info</div>
+    </div>
+</body>
+</html>
